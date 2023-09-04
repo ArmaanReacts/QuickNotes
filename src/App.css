@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nexa', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+.ql-editor p,
+.ql-editor.ql-blank::before {
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+.pane {
+    overflow-y: auto;
+    /* padding: 10px; */
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: #caf0f8;
+}
+
+.sidebar--note {
+    /* display: flex; */
+}
+
+.sidebar--header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0096c7;
+    border-bottom: 3px solid #caf0f8;
+    align-items: center;
+    color: #ffffff; 
+}
+
+.sidebar--header > h3 {
+    font-size: 1.8rem;
+}
+
+.new-note {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    color: #0096c7;
+    font-size: xx-large;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+
+.first-note {
+    cursor: pointer;
+    background-color: #0096c7;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+.editor {
+    width: 80%;
+    height: 100vh;
+}
+
+.title {
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title--delete {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.title:hover .title--delete {
+    display: block;
+}
+
+.note-summary:not(:last-of-type) {
+    border-bottom: 1px solid lightgray;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+    border: 3px solid #ffffff; 
+    border-radius: 50%;
+}
+.title-h{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 10px;
+    gap:8px;
+    justify-content: left;
+    border: 3px solid #ffffff; 
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 60px;
+}
+.text-snippet {
+    padding-inline: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #5e5e5e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-note {
+    background-color: #0096c7;
+}
+
+.selected-note .text-snippet {
+    color: white;
+    font-weight: 700;
+}
+
+.gutter {
+    background-color: #eee;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+.gutter.gutter-horizontal:hover {
+    cursor: col-resize;
+}
+
+.split {
+    display: flex;
+}
+
+.no-notes {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.delete-btn {
+    display: none;
+    background: none;
+    border-radius: 50%;
+    border: none;
+}
+
+.title:hover > .delete-btn {
+    display: block;
+}
+.trash-icon {
+    cursor: pointer;
+}
+
+.gg-trash {
+    
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin-right: 5px;
+    transform: scale(var(--ggs,1));
+    width: 10px;
+    height: 12px;
+    border: 2px solid transparent;
+    box-shadow:
+        0 0 0 2px,
+        inset -2px 0 0,
+        inset 2px 0 0;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    margin-top: 4px
+}
+
+.gg-trash::after,
+.gg-trash::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+
+.gg-trash::after {
+    background: currentColor;
+    border-radius: 3px;
+    width: 16px;
+    height: 2px;
+    top: -4px;
+    left: -5px
+}
+
+.gg-trash::before {
+    width: 10px;
+    height: 4px;
+    border: 2px solid;
+    border-bottom: transparent;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    top: -7px;
+    left: -2px
+} 
+
+.gutter-horizontal {
+    /* display: none; */
+    width: 1px !important;
+    background: #ccc !important;
+  }
+
+.gutter-horizontal:hover {
+    /* Styles to show the divider when hovered */
+    /* border: 1px solid #000; */
+    width: 6px !important; /* You can adjust the styles as needed */
+    background: #cccccc !important
+  }
