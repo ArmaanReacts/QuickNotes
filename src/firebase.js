@@ -6,12 +6,7 @@ import { getFirestore, collection } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCoJ9b5fCoOOu9vW27LP8SPSb30Wv5qVlQ",
-  authDomain: "react-markdown-notes-346fa.firebaseapp.com",
-  projectId: "react-markdown-notes-346fa",
-  storageBucket: "react-markdown-notes-346fa.appspot.com",
-  messagingSenderId: "690546017373",
-  appId: "1:690546017373:web:8ee0dfdafc626804a879b4"
+  // Use your cradentials 
 };
 
 // Initialize Firebase
