@@ -2,6 +2,10 @@
 
 The Markdown Note Taking App is a simple yet powerful application that allows you to create and manage your notes in Markdown format. With built-in preview functionality, you can instantly visualize how your Markdown notes will look when rendered. Additionally, the app seamlessly integrates with Firebase to securely store and synchronize your notes across devices.
 
+# Website
+
+`https://quicknotes-ar.netlify.app/`
+
 ## Features
 
 - Create and Edit Markdown Notes: Write and edit your notes using the Markdown syntax, a lightweight and human-readable markup language.
